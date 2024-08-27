@@ -9,39 +9,47 @@
 </head>
 
 <body>
+    <div class="video-container">
+        <video id="videoPlayer" controls>
+            <source src="videos/Parte2.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
 
-    <body>
-        <div class="video-container">
-            <video id="videoPlayer" controls>
-                <source src="videos/Parte2.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de video.
-            </video>
-
-            <div id="choices" class="choices">
-                <button onclick="playVideo('videos/llora.mp4')">Opción 1: Llora</button>
-                <button onclick="playVideo('videos/Premium.mp4')">Opción 2: Premium</button>
-            </div>
+        <div id="choices" class="choices">
+            <button onclick="playVideo('videos/llora.mp4')">Opción 1: Llora</button>
+            <button onclick="playVideo('videos/Premium.mp4')">Opción 2: Premium</button>
         </div>
+    </div>
 
-        <script>
-            const video = document.getElementById('videoPlayer');
-            const choices = document.getElementById('choices');
+    <script>
+        const video = document.getElementById('videoPlayer');
+        const choices = document.getElementById('choices');
 
-            video.addEventListener('timeupdate', function () {
-                if (video.currentTime >= 2) { // Cuando el tiempo es 1 minuto (60 segundos)
-                    video.pause(); // Pausa el video
-                    choices.style.display = 'block'; // Muestra las opciones
-                }
-            });
+        // Bloquea la entrada en pantalla completa
+        document.addEventListener('fullscreenchange', preventFullscreen);
+        document.addEventListener('webkitfullscreenchange', preventFullscreen);
+        document.addEventListener('mozfullscreenchange', preventFullscreen);
+        document.addEventListener('msfullscreenchange', preventFullscreen);
 
-            function playVideo(videoSrc) {
-                video.src = videoSrc; // Cambia la fuente del video
-                video.play(); // Reproduce el nuevo video
-                choices.style.display = 'none'; // Oculta las opciones
+        function preventFullscreen(e) {
+            if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement) {
+                document.exitFullscreen();
             }
-        </script>
+        }
 
+        video.addEventListener('timeupdate', function() {
+            if (video.currentTime >= 2) { // Cuando el tiempo es 1 minuto (60 segundos)
+                video.pause(); // Pausa el video
+                choices.style.display = 'block'; // Muestra las opciones
+            }
+        });
 
-    </body>
+        function playVideo(videoSrc) {
+            video.src = videoSrc; // Cambia la fuente del video
+            video.play(); // Reproduce el nuevo video
+            choices.style.display = 'none'; // Oculta las opciones
+        }
+    </script>
+</body>
 
 </html>
