@@ -1,3 +1,4 @@
+/* Cuerpo */
 body {
     margin: 0;
     padding: 0;
@@ -9,10 +10,43 @@ body {
     height: 100vh;
 }
 
-.video-container {
+/* Contenedor de inicio */
+.iniciar-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+/* Boton de inicio */
+.iniciar {
+    background-color: #ffffff; 
+    border-color: rgb(125, 125, 125); 
+    color: rgb(0, 0, 0); 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 19px; 
+    border-radius: 12px; 
+    transition: background-color 0.3s ease; 
+}
+
+.iniciar:hover {
+    background-color: #e6eae6; 
+    cursor: pointer; 
+}
+
+/* Contenedor principal */
+.contenedor-video {
+    display: none; 
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 90%;
     height: auto;
 }
 
@@ -21,28 +55,30 @@ video {
     height: auto;
 }
 
-.choices {
+.opciones {
     display: none;
     position: absolute;
-    top: 50%;
+    bottom: 25px; /* Ajusta la distancia desde la parte inferior */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%); /* Centra horizontalmente */
     text-align: center;
     z-index: 10;
+    width: 100%; /* Opción para que se extienda en todo el ancho */
 }
 
-.choices button {
+.opciones button {
     padding: 10px 20px;
     margin: 10px;
     font-size: 16px;
     cursor: pointer;
-    background-color: white;
-    border: 2px solid #07856D;
-    color: #07856D;
+    background-color: rgba(255, 255, 255, 0.685);
+    border: 2px solid #000000;
+    color: #000000;
     font-weight: bold;
+    border-radius: 20px;
 }
 
-.choices button:hover {
-    background-color: #07856D;
-    color: white;
+.opciones button:hover {
+    background-color: #ffffff;
+    
 }

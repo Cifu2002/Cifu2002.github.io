@@ -5,25 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Policia</title>
+    <link rel="icon" href="icono.jpg" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div class="video-container">
-        <video id="videoPlayer" controls>
-            <source src="videos/Parte2.mp4" type="video/mp4">
+    <div class="iniciar-container">
+        <button class="iniciar">
+            Iniciar <i class="fa-solid fa-play" style="color: #000000;"></i>
+        </button>
+    </div>
+    <div class="contenedor-video">
+        <video id="videoInicio">
+            <source src="videos/VIDEO 1.MP4" type="video/mp4">
             Tu navegador no soporta la reproducción de video.
         </video>
 
-        <div id="choices" class="choices">
-            <button onclick="playVideo('videos/llora.mp4')">Opción 1: Llora</button>
-            <button onclick="playVideo('videos/Premium.mp4')">Opción 2: Premium</button>
+        <!-- VIDEO INICIO -->
+        <div id="opciones" class="opciones">
+            <button onclick="playVideo('videos/VIDEO 1-OPCION 1.mp4')">Opción 1:
+                <br>• Via con buena iluminación
+                <br>• Infraestructura en buen estado
+                <br>• Zona transitada frecuentemente
+            </button>
+            <button onclick="playVideo('videos/VIDEO 1-OPCION 2.mp4')">Opción 2:
+                <br>• Via con falta de iluminación
+                <br>• Presencia de pandillas
+                <br>• Degradación Urbana
+            </button>
+        </div>
+
+        <!-- OPCION 1 -->
+        <div id="opcion1" class="opciones">
+            <button onclick="playVideo('videos/RETIRARSE DEL LUGAR.mp4')">Retirarse del lugar
+            </button>
+            <button onclick="playVideo('videos/QUEDARSE EN EL LUGAR.mp4')">Permanecer en la parada
+            </button>
+        </div>
+        <!-- OP RETIRARSE -->
+        <div id="op_retirarse" class="opciones">
+            <button onclick="playVideo('videos/SALIR CORRIENDO.mp4')">Salir corriendo
+            </button>
+            <button onclick="playVideo('videos/LLAMAR A LA POLICIA.mp4')">Llamar a la policia
+            </button>
         </div>
     </div>
 
     <script>
-        const video = document.getElementById('videoPlayer');
-        const choices = document.getElementById('choices');
+        const botonIniciar = document.querySelector('.iniciar');
+        const contenedorIniciar = document.querySelector('.iniciar-container');
+        const contenedorVideo = document.querySelector('.contenedor-video');
+        const video = document.getElementById('videoInicio');
+        const opciones = document.getElementById('opciones');
+        const opciones2 = document.getElementById('opcion1');
+        const opciones3 = document.getElementById('op_retirarse');
+
+        botonIniciar.addEventListener('click', function () {
+            contenedorIniciar.style.display = 'none'; 
+            contenedorVideo.style.display = 'block'; 
+            video.play(); 
+        });
 
         // Bloquea la entrada en pantalla completa
         document.addEventListener('fullscreenchange', preventFullscreen);
@@ -37,18 +81,28 @@
             }
         }
 
-        video.addEventListener('timeupdate', function() {
-            if (video.currentTime >= 2) { // Cuando el tiempo es 1 minuto (60 segundos)
-                video.pause(); // Pausa el video
-                choices.style.display = 'block'; // Muestra las opciones
+        video.addEventListener('timeupdate', function () {
+            if (video.currentTime >= 2) {
+                const videoSrc = video.currentSrc;
+                console.log("Video actual: " + videoSrc);
+                if (videoSrc.includes('http://localhost/Carlos/Cifu2002.github.io/videos/VIDEO%201.MP4')) {
+                    opciones.style.display = 'block';
+                } else if (videoSrc.includes('http://localhost/Carlos/Cifu2002.github.io/videos/VIDEO%201-OPCION%201.mp4')) {
+                    opciones2.style.display = 'block';
+                } else if (videoSrc.includes('http://localhost/Carlos/Cifu2002.github.io/videos/RETIRARSE%20DEL%20LUGAR.mp4')) {
+                    opciones3.style.display = 'block';
+                }
             }
         });
 
         function playVideo(videoSrc) {
-            video.src = videoSrc; // Cambia la fuente del video
-            video.play(); // Reproduce el nuevo video
-            choices.style.display = 'none'; // Oculta las opciones
+            video.src = videoSrc;
+            video.play();
+            opciones.style.display = 'none';
+            opciones2.style.display = 'none';
+            opciones3.style.display = 'none';
         }
+
     </script>
 </body>
 
