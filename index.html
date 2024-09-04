@@ -64,9 +64,9 @@
         const opciones3 = document.getElementById('op_retirarse');
 
         botonIniciar.addEventListener('click', function () {
-            contenedorIniciar.style.display = 'none'; 
-            contenedorVideo.style.display = 'block'; 
-            video.play(); 
+            contenedorIniciar.style.display = 'none';
+            contenedorVideo.style.display = 'block';
+            video.play();
         });
 
         // Bloquea la entrada en pantalla completa
@@ -85,6 +85,9 @@
             if (video.currentTime >= 2) {
                 const videoSrc = video.currentSrc;
                 console.log("Video actual: " + videoSrc);
+
+                const videoSrc1 = video.src;
+                console.log("Video actual: " + videoSrc1);
                 if (videoSrc.includes('http://localhost/Carlos/Cifu2002.github.io/videos/VIDEO%201.MP4')) {
                     opciones.style.display = 'block';
                 } else if (videoSrc.includes('http://localhost/Carlos/Cifu2002.github.io/videos/VIDEO%201-OPCION%201.mp4')) {
