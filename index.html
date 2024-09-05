@@ -81,17 +81,15 @@
             }
         }
 
-        video.addEventListener('timeupdate', function () {
-            if (video.currentTime >= 2) {
-                const videoSrc = video.currentSrc;
-                console.log("Video actual: " + videoSrc);
-                if (videoSrc.includes('https://cifu2002.github.io/videos/VIDEO%201.MP4')) {
-                    opciones.style.display = 'block';
-                } else if (videoSrc.includes('https://cifu2002.github.io/videos/VIDEO%201-OPCION%201.mp4')) {
-                    opciones2.style.display = 'block';
-                } else if (videoSrc.includes('https://cifu2002.github.io/videos/RETIRARSE%20DEL%20LUGAR.mp4')) {
-                    opciones3.style.display = 'block';
-                }
+        video.addEventListener('ended', function () {
+            const videoSrc = video.currentSrc;
+            console.log("Video actual: " + videoSrc);
+            if (videoSrc.includes('https://cifu2002.github.io/videos/VIDEO%201.MP4')) {
+                opciones.style.display = 'block';
+            } else if (videoSrc.includes('https://cifu2002.github.io/videos/VIDEO%201-OPCION%201.mp4')) {
+                opciones2.style.display = 'block';
+            } else if (videoSrc.includes('https://cifu2002.github.io/videos/RETIRARSE%20DEL%20LUGAR.mp4')) {
+                opciones3.style.display = 'block';
             }
         });
 
