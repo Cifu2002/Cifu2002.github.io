@@ -363,6 +363,12 @@ body {
   gap: 1.5rem;
 }
 
+.stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #8a2be2; /* un morado bonito o cambia al que quieras */
+}
+
 .stat-card {
   background: rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(139, 92, 246, 0.3);
