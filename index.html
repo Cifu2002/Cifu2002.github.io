@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Web</title>
+    <meta name="description"
+        content="Portafolio personal de desarrollador Full Stack especializado en tecnologías web modernas">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Dev Icons for technology icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <!-- Logotipo de la pagina -->
+    <link rel="icon" href="logo.jpg" type="image/x-icon" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="gradient-text">Portafolio web</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active" data-section="home">Inicio</a>
+                <a href="#about" class="nav-link" data-section="about">Sobre mí</a>
+                <a href="#skills" class="nav-link" data-section="skills">Habilidades</a>
+                <a href="#education" class="nav-link" data-section="education">Educación</a>
+                <a href="#projects" class="nav-link" data-section="projects">Proyectos</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contacto</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Hola, soy</span>
+                        <br>
+                        <span class="hero-name">Esteban Cifuentes</span>
+                    </h1>
+                    <p class="hero-description">
+                        Ingeniero de software | Desarrollador Backend
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-briefcase"></i>
+                            Ver Proyectos
+                        </a>
+                        <a href="Archivos/CV.pdf " download class="btn btn-outline">
+                            <i class="fas fa-download"></i>
+                            Descargar CV
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <div class="image-glow"></div>
+                        <img src="Foto_Perfil2.jpg" alt="Foto perfil" class="profile-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-user"></i>
+                    Sobre Mí
+                </h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="card">
+                        <div class="about-intro">
+                            <h3>👋 Soy un desarrollador backend apasionado por crear soluciones que
+                                simplifiquen la vida de las personas.</h3>
+                            <p class="about-description">
+                                Me gusta el trabajo en equipo, valoro la comunicación clara y disfruto aprender de
+                                quienes
+                                me rodean. Me adapto fácilmente, me encanta proponer ideas, escuchar distintas
+                                perspectivas
+                                y contribuir a un entorno colaborativo.
+                            </p>
+                            <p class="about-description">
+                                💡 Una frase que siempre me inspira es:
+                                “Si puedes imaginarlo, puedes programarlo”, de Alejandro Taboada Sánchez (Programación
+                                ATS).
+                            </p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <div class="stat-label">Me gustan los viajes</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="stat-label">Disfruto la música</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-football-ball"></i>
+                        </div>
+                        <div class="stat-label">Práctico deporte</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="stat-label">Me apasiona investigar</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-tools"></i>
+                    Habilidades Técnicas
+                </h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    Tecnologías y herramientas que domino para crear soluciones web modernas y eficientes
+                </p>
+            </div>
+
+            <div class="skills-categories">
+                <!-- Frontend Technologies -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-paint-brush"></i>
+                        Frontend
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-html5-plain colored"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>HTML5</h4>
+                                <span class="skill-level">Nivel Intermedio</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-css3-plain colored"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>CSS</h4>
+                                <span class="skill-level">Nivel Bajo</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-javascript-plain colored"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>JavaScript</h4>
+                                <span class="skill-level">Nivel Intermedio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Technologies -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-server"></i>
+                        Backend
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-python-plain colored"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Python</h4>
+                                <span class="skill-level">Nivel Intermedio</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-csharp-plain colored"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>C#</h4>
+                                <span class="skill-level">Nivel Intermedio</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-php-plain colored"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>PHP</h4>
+                                <span class="skill-level">Nivel Intermedio</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-java-plain colored"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Java</h4>
+                                <span class="skill-level">Nivel Intermedio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-book"></i>
+                        Frameworks
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-dotnetcore-plain colored"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>.NET</h4>
+                                <span class="skill-level">Nivel Intermedio</span>
+                            </div>
+                        </div>
+
+                        <!-- Laravel -->
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-laravel-plain colored"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Laravel</h4>
+                                <span class="skill-level">Nivel Bajo</span>
+                            </div>
+                        </div>
+
+                        <!-- Angular -->
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-angularjs-plain colored"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Angular</h4>
+                                <span class="skill-level">Nivel Bajo</span>
+                            </div>
+                        </div>
+
+                        <!-- Bootstrap -->
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-bootstrap-plain colored"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Bootstrap</h4>
+                                <span class="skill-level">Nivel Intermedio</span>
+                            </div>
+                        </div>
+
+                        <!-- Blazor -->
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-microsoft"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Blazor</h4>
+                                <span class="skill-level">Nivel Bajo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-wrench"></i>
+                        Herramientas
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-vscode-plain colored"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>VS Code</h4>
+                                <span class="skill-level">Nivel Intermedio</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-visualstudio-plain colored"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Visual Studio</h4>
+                                <span class="skill-level">Nivel Intermedio</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-github-plain colored"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Git</h4>
+                                <span class="skill-level">Nivel Intermedio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database Technologies -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-database"></i>
+                        Bases de Datos
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-mysql-plain colored"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>MySQL</h4>
+                                <span class="skill-level">Nivel Intermedio</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Oracle</h4>
+                                <span class="skill-level">Nivel Bajo</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-microsoft"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>SQL Server</h4>
+                                <span class="skill-level">Nivel Intermedio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tools -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-wrench"></i>
+                        Herramientas de diseño
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-figma-plain colored"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Figma</h4>
+                                <span class="skill-level">Nivel Intermedio</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-xd-plain colored"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Adobe XD</h4>
+                                <span class="skill-level">Nivel Intermedio</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-pencil-ruler"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Balsamiq</h4>
+                                <span class="skill-level">Nivel Intermedio</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Tools & Others -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-wrench"></i>
+                        Servidores web
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-nginx-original colored"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Nginx</h4>
+                                <span class="skill-level">Nivel Intermedio</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Apache</h4>
+                                <span class="skill-level">Nivel Intermedio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    Educación y Certificados
+                </h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="card">
+                        <div class="education-header">
+                            <span class="badge">Educación</span>
+                            <span class="education-date">
+                                <i class="fas fa-calendar"></i>
+                                2020 - 2025
+                            </span>
+                        </div>
+                        <h3>Universidad Técnica de Ambato</h3>
+                        <h4>Ingeniería en Software</h4>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="card">
+                        <div class="education-header">
+                            <span class="badge">Curso</span>
+                            <span class="education-date">
+                                <i class="fas fa-calendar"></i>
+                                2025
+                            </span>
+                        </div>
+                        <h3>Fundamentos de Python 2</h3>
+                        <a href="Archivos/Certificado_PY.pdf" download>
+                            <h4>Descargar certificado</h4>
+                        </a>
+                        <p>Cisco Networking Academy</p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="card">
+                        <div class="education-header">
+                            <span class="badge">Curso</span>
+                            <span class="education-date">
+                                <i class="fas fa-calendar"></i>
+                                2025
+                            </span>
+                        </div>
+                        <h3>
+                            Curso de introducción al desarrollo web: HTML y CSS (1/2)</h3>
+                        <a href="https://skillshop.exceedlms.com/student/award/E7LHFjH86gCgkrJXWWiYxRnm">
+                            <h4>Descargar certificado</h4>
+                        </a>
+                        <p>Google</p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="card">
+                        <div class="education-header">
+                            <span class="badge">Curso</span>
+                            <span class="education-date">
+                                <i class="fas fa-calendar"></i>
+                                2022
+                            </span>
+                        </div>
+                        <h3>Ensamblaje y mantenimiento de computadores</h3>
+                        <a href="Archivos/Certificado_ensamblaje.pdf" download>
+                            <h4>Descargar certificado</h4>
+                        </a>
+                        <p>Universidad Técnica de Ambato</p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="card">
+                        <div class="education-header">
+                            <span class="badge">Certificado</span>
+                            <span class="education-date">
+                                <i class="fas fa-calendar"></i>
+                                2022
+                            </span>
+                        </div>
+                        <h3>CSEI 2022 IV | Conference On Computer Science, Electronics And Industrial Engineering</h3>
+                        <a href="Archivos/Curso_completo.pdf" download>
+                            <h4>Descargar certificado</h4>
+                        </a>
+                        <p>Universidad Técnica de Ambato</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-briefcase"></i>
+                    Mis Proyectos
+                </h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="card">
+                        <div class="project-image">
+                            <img src="Img/Acroware.png" alt="E-commerce Platform">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/Yachitzu/Acroware" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Acroware</h3>
+                            <p>Es una plataforma integral de gestión de activos que permite a las organizaciones
+                                administrar eficientemente diferentes activos. El sistema cuenta con funcionalidades
+                                avanzadas de gestión de usuarios, autenticación segura y notificaciones por correo
+                                electrónico automatizadas.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <br>
+                            <div>
+                                <a href="https://github.com/Yachitzu/Acroware" style="color: #d1d5db;">
+                                    <h4 style="color:#d1d5db;">Ver repositorio</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card">
+                        <div class="project-image">
+                            <img src="Img/Cerveceria.png" alt="Task Management App">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/ChrisitanLP/ProyectoGestion6toSemestre"
+                                        class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Cervecería INTI</h3>
+                            <p>Es una plataforma web integral para la gestión de cervecerías que incluye una interfaz
+                                pública para clientes y una interfaz administrativa segura para operaciones CRUD.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <br>
+                            <div>
+                                <a href="https://github.com/ChrisitanLP/ProyectoGestion6toSemestre"
+                                    style="color: #d1d5db;">
+                                    <h4 style="color:#d1d5db;">Ver repositorio</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card">
+                        <div class="project-image">
+                            <img src="Img/LMS.png" alt="Weather Dashboard">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/ChrisitanLP/ProyectoFinalManejo" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Sistema de Gestión de Aprendizaje (LMS)</h3>
+                            <p>Es una plataforma orientada a facilitar el proceso de enseñanza y aprendizaje dentro de
+                                la comunidad educativa. </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <br>
+                            <div>
+                                <a href="https://github.com/ChrisitanLP/ProyectoFinalManejo"
+                                    style="color: #d1d5db;">
+                                    <h4 style="color:#d1d5db;">Ver repositorio</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-comments"></i>
+                    Contacto
+                </h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    ¿Tienes algún proyecto en mente? ¡Me encantaría escuchar sobre él! Contáctame y trabajemos juntos.
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <a class="card contact-link">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>estebancifu88@gmail.com</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Ubicación</h3>
+                                <p>Riobamba, Ecuador</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-section">
+                    <div class="card">
+                        <h3>Sígueme en redes</h3>
+                        <p>Conecta conmigo en mis redes sociales</p>
+                        <div class="social-links">
+                            <a href="https://github.com/Cifu2002" class="social-link">
+                                <i class="fab fa-github"></i>
+                                <div>
+                                    <strong>GitHub</strong>
+                                    <span>Cifu2002</span>
+                                </div>
+                            </a>
+                            <a href="https://www.linkedin.com/in/esteban-cifuentes-87336136a/" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                                <div>
+                                    <strong>LinkedIn</strong>
+                                    <span>Esteban Cifuentes</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Esteban Cifuentes. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
